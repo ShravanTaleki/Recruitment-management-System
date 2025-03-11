@@ -1,0 +1,16 @@
+# Python version (ensure you are using Python 3.10+)
+python>=3.10,<3.13
+
+# Django and related dependencies
+django>=4.2.6
+djangorestframework
+
+# Database (SQLite is built-in, but for PostgreSQL/MySQL, add the respective driver)
+sqlite3  # Built-in, no need to install separately
+
+# Other essential packages you might need
+gunicorn  # For production deployment (optional)
+whitenoise  # For serving static files in production
+psycopg2  # PostgreSQL support (remove if not using PostgreSQL)
+mysqlclient  # MySQL support (remove if not using MySQL)
+pillow  # Image processing (used if you handle images in Django)
