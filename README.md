@@ -53,7 +53,7 @@ Access it at: `http://127.0.0.1:8000/`
 ### 6. Run the Streamlit Frontend
 ```sh
 cd ..
-streamlit run app.py
+streamlit run streamlit_main_source_code.py
 ```
 
 ## Usage
