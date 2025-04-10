@@ -20,17 +20,20 @@ A full-stack recruitment management system integrating a Django backend with a S
 - **Server**: Nginx (optional for deployment)
 
 ## Installation
+
 ### 1. Clone the Repository
 ```sh
- git clone https://github.com/ShravanTaleki/Recruitment-management-System.git
- cd Recruitment-management-System
+git clone https://github.com/ShravanTaleki/Recruitment-management-System.git
+cd Recruitment-management-System
 ```
 
 ### 2. Set Up Virtual Environment (Optional but Recommended)
 ```sh
 python -m venv venv
-source venv/bin/activate   # On macOS/Linux
-venv\Scripts\activate     # On Windows
+# For macOS/Linux
+source venv/bin/activate
+# For Windows
+venv\Scripts\activate
 ```
 
 ### 3. Install Dependencies
@@ -40,21 +43,32 @@ pip install -r requirements.txt
 
 ### 4. Apply Migrations
 ```sh
+cd recruitment_backend
+python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 5. Run the Django Backend
+### 5. Create a Superuser (Admin Account)
 ```sh
-cd recruitment_backend
+python manage.py createsuperuser
+```
+> Follow the prompts to enter a username, email, and password.
+
+### 6. Run the Django Backend
+```sh
 python manage.py runserver
 ```
-Access it at: `http://127.0.0.1:8000/`
+Access it at: `http://127.0.0.1:8000/`  
+Django Admin Panel: `http://127.0.0.1:8000/admin`
 
-### 6. Run the Streamlit Frontend
+### 7. Run the Streamlit Frontend
+Open a new terminal (or tab), then:
 ```sh
 cd ..
 streamlit run streamlit_main_source_code.py
 ```
+This will launch the Streamlit UI in your default web browser.
+
 
 ## Usage
 1. Recruiters can post job listings.
